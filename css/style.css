@@ -1,0 +1,270 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*
+    body
+  */
+body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    background: rgb(0, 0, 0);
+    background: linear-gradient(to bottom, #000000, #3e0000);
+    overflow-x: hidden;
+    flex-direction: column;
+    background-attachment: fixed;
+    justify-content: space-between;
+    color: white;
+}
+
+/* 
+  main
+ */
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    min-height: 100%;
+}
+
+/* 
+  section
+    */
+section {
+    height: 30%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+/* 
+  header
+*/
+header {
+    background-color: #3e0000;
+    min-height: 17vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.header_div {
+    background-color: #FF7400;
+    width: 20vw;
+    border-radius: 16px;
+    height: 33px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: uppercase;
+}
+
+.header_section {
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+/* header animation */
+.header_div:hover,.btn_ajouter:hover{
+    background-color: white;
+    cursor: pointer;
+}
+.header_div:hover h3, .btn_ajouter:hover h3{
+    color: #FF7400;
+}
+/*
+   menu burger
+ */
+.barre {
+    width: 30px;
+    height: 3px;
+    background-color: white;
+}
+
+.menu_burger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+
+/* 
+ logo
+*/
+.logo {
+    width: 62px;
+}
+
+.figure_logo {
+    width: 70vw;
+}
+
+/* 
+footer
+ */
+footer {
+    min-height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+footer h4 {
+    text-align: center;
+    color: grey;
+}
+
+h3 {
+    color: white;
+}
+
+/* 
+ menu 
+ */
+.menu_div {
+    min-width: 25%;
+    height: 80%;
+    margin: 2%;
+    background-color: #644242;
+    border-radius: 20px 20px 0 20px;
+    display: flex
+;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+h5{
+    font-size: clamp(15px, 2.5vw, 2rem); 
+}
+/* 
+  bouton ajouter
+*/
+.menu_div:nth-last-child(2) .btn_ajouter {
+  
+    margin-top: auto;       
+    border-radius: 30px;
+    
+}
+
+.btn_ajouter {
+    background-color: #FF7400;
+    border-radius: 30px;
+    text-transform: capitalize;
+    width: 50%;
+    margin: 5%;
+}
+.btn_ajouter h3{
+    text-align: center;
+    font-size: clamp(17px, 2.5vw, 2rem);
+}
+/*
+    images
+   */
+img {
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+/*
+  menu principale
+ */
+.main_menu {
+    height: 10%;
+    justify-content: space-evenly;
+    text-align: center;
+    margin: 15px;
+}
+
+.main_menu h2 {
+    text-transform: capitalize;
+    width: 30%;
+    font-size: 5VW;
+    font-family: 'Edu AU VIC WA NT Hand', sans-serif;
+}
+
+figcaption h2 {
+    margin: 2px;
+}
+
+figure h5 {
+    color: gray;
+    margin: 3px;
+    text-transform: capitalize;
+    font-size: clamp(8px, 2.5vw, 14px);
+}
+.headerSelected{
+    
+}
+.recherche {
+    width: 300px;
+    padding: 10px 20px;
+    border: 2px solid white;
+    border-radius: 50px;
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.recherche::placeholder {
+    color: white;
+    opacity: 0.7;
+}
+
+.recherche:focus {
+    border-color: white;
+    box-shadow: 0 0 5px rgba(122, 76, 246, 0.5);
+}
+.placeholderR {
+    position: relative;
+    display: flex;
+    align-items: center;
+    display: none;
+}
+.loupe {
+    position: absolute;
+    right: 12px;
+    color: white;
+    font-size: 18px;
+}
+@media  ( min-width: 485px) {
+    
+    .menu_div{
+        height: 90%;
+    }
+}
+@media  ( min-width: 800px) 
+{
+        section {
+            height: 80%; 
+            width: 100%; 
+            display: flex;
+            justify-content: space-evenly; 
+            align-items: center;
+            flex-wrap: nowrap;
+            flex-direction: row;
+           
+        }
+
+        .header_section {
+            align-items: center;
+        }
+        .main_menu{
+            margin: 30px;
+        }
+
+    .placeholderR{
+        display: flex;
+    }
+    
+}
+@media  ( min-width: 1150px) {
+    figure h5{
+        font-size: 1.5rem;
+    }
+}
